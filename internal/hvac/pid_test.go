@@ -3,6 +3,7 @@ package hvac_test
 import (
 	"context"
 	"errors"
+	"math"
 	"testing"
 	"time"
 
@@ -102,6 +103,22 @@ func TestPIDController_DerivativeAction(t *testing.T) {
 	expected := 20.0
 	if out != expected {
 		t.Errorf("expected derivative output %.2f, got %.2f", expected, out)
+	}
+}
+
+func TestThermalModel_NewtonsCooling(t *testing.T) {
+	model := hvac.NewThermalModel(hvac.ThermalConfig{
+		AmbientTemp: 20.0,
+		InletTemp:   15.0,
+		KEnv:        0.05,
+		KVent:       0.0,
+		HeatLoad:    0.0,
+	}, 30.0)
+
+	newTemp := model.Step(0, 1.0)
+	expected := 29.5
+	if math.Abs(newTemp-expected) > 1e-4 {
+		t.Errorf("expected temp %.2f, got %.2f", expected, newTemp)
 	}
 }
 
