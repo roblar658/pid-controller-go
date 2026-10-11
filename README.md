@@ -2,6 +2,9 @@
 
 PID-basert reguleringssystem for ventilasjon og inneklima i Go, simulert med Newtons avkjølings- og oppvarmingslov og visualisert med et interaktivt web-dashbord (Chart.js).
 
+<img width="842" height="478" alt="image" src="https://github.com/user-attachments/assets/6172f32b-52e0-4f79-87c7-0c3d78168238" />
+
+
 ---
 
 ## Matematiske modeller og formler
