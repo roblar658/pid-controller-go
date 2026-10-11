@@ -1,5 +1,7 @@
 # HVAC Controller & Termisk Simulering
 
+<img width="918" height="482" alt="image" src="https://github.com/user-attachments/assets/a909b8b8-4be2-4c29-9845-5387e4ef7086" />
+
 PID-basert reguleringssystem for ventilasjon og inneklima i Go, simulert med Newtons avkjølings- og oppvarmingslov og visualisert med et interaktivt web-dashbord (Chart.js).
 
 ---
@@ -26,5 +28,6 @@ PID-basert reguleringssystem for ventilasjon og inneklima i Go, simulert med New
 Kjør følgende kommando fra rotmappen (`hvac-controller`):
 
 ```bash
+
 go run ./cmd/server
-<img width="918" height="482" alt="image" src="https://github.com/user-attachments/assets/a909b8b8-4be2-4c29-9845-5387e4ef7086" />
+
